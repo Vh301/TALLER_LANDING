@@ -1,6 +1,6 @@
 # TALLER BC — Landing
 
-Public information page for **TALLER Builders Club** — a community utility token (TALLER / TLR) on TON.
+Public information page for **TALLER BC — Grow as a Builder on TON**. Creative builders club and community utility token (TALLER / TLR).
 
 - **Stack:** Next.js 16, TypeScript, Tailwind CSS
 - **Deploy:** Vercel (`taller-landing`)

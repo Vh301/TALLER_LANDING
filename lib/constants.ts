@@ -8,7 +8,7 @@ export const TOKEN = {
   network: "TON",
   standard: "Jetton",
   utility:
-    "Community participation, access, and contributor recognition",
+    "Community participation, access, recognition, and future club features",
   investmentProduct: "No",
   masterAddress: "EQBbbUvr84qdfAAWUL8ZjRvO3FzEDKsLEFMiKlXg7d9u17Rq",
   explorerUrl:
@@ -16,9 +16,12 @@ export const TOKEN = {
 } as const;
 
 export const SITE = {
-  title: "TALLER BC — TALLER Builders Club",
+  title: "TALLER BC — Grow as a Builder on TON",
   description:
-    "TALLER BC is a community utility token on TON for builders, creators, testers, and early supporters. Not an investment product.",
-  slogan: "Build. Test. Create. Belong.",
-  sloganRu: "Создавай. Тестируй. Участвуй. Будь внутри.",
+    "TALLER BC is a creative builders club on TON. TALLER / TLR is a community utility token for participation, access, and recognition — not an investment product.",
+  heroTitle: "Grow as a Builder on TON",
+  heroSubtitle:
+    "A creative builders club for makers, designers, developers, and digital experimenters.",
+  heroTokenLine:
+    "TALLER / TLR is a community utility token for participation, access, recognition, and future club features.",
 } as const;
