@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { SITE, TOKEN } from "@/lib/constants";
+import { BrandLockup } from "@/components/brand";
+import { COMMUNITY, SITE, TOKEN } from "@/lib/constants";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -71,27 +71,14 @@ const tokenRows = [
 export default function HomePage() {
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-[var(--card-border)]/80 bg-[var(--background)]/90 backdrop-blur-md">
-        <div className="section-inner flex items-center justify-between gap-6 py-4 sm:py-5">
-          <a
-            href="#"
-            className="flex min-w-0 items-center gap-3 transition opacity-95 hover:opacity-100"
-          >
-            <Image
-              src="/taller-bc-logo.png"
-              alt="TALLER BC logo"
-              width={44}
-              height={44}
-              className="h-10 w-10 shrink-0 rounded-full sm:h-11 sm:w-11"
-              priority
-            />
-            <span className="truncate text-sm font-semibold tracking-wide text-sky-400 sm:text-base">
-              TALLER BC
-            </span>
+      <header className="site-header sticky top-0 z-50">
+        <div className="section-inner site-header__inner !py-4 sm:!py-5">
+          <a href="#" className="site-header__brand">
+            <BrandLockup size="sm" priority />
           </a>
-          <nav className="flex shrink-0 flex-wrap justify-end gap-x-4 gap-y-1 text-sm text-[var(--muted)]">
+          <nav className="site-nav" aria-label="Main">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="hover:text-white">
+              <a key={link.href} href={link.href} className="site-nav__link">
                 {link.label}
               </a>
             ))}
@@ -101,22 +88,29 @@ export default function HomePage() {
 
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden border-b border-[var(--card-border)]/60">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#0ea5e915,_transparent_55%)]" />
+        <section className="hero-section">
+          <div className="hero-section__bg" aria-hidden>
+            <div className="hero-section__grid" />
+            <div className="hero-section__glow hero-section__glow--1" />
+            <div className="hero-section__glow hero-section__glow--2" />
+          </div>
           <div className="section-inner relative">
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-sky-400">
-              TON · Creative builders club
-            </p>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              TALLER BC
-            </h1>
-            <p className="mt-4 text-2xl font-medium text-sky-300 sm:text-3xl">
-              {SITE.heroTitle}
-            </p>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
-              {SITE.heroSubtitle}
-            </p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
+            <p className="hero-eyebrow">TON · Creative builders club</p>
+            <div className="hero-brand-stage">
+              <BrandLockup size="lg" showTagline priority />
+              <div className="hero-brand-copy">
+                <div className="hero-rise-line" aria-hidden>
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
+                  {SITE.heroSubtitle}
+                </p>
+              </div>
+            </div>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
               {SITE.heroTokenLine}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -335,10 +329,20 @@ export default function HomePage() {
           <div className="section-inner text-center">
             <h2 className="section-title">Join Community</h2>
             <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-              Community channels and participation links will be announced here.
-              TALLER BC is for builders and digital experimenters — not
-              speculative trading or investment pitches.
+              Follow updates and club participation in our Telegram channel. TALLER
+              BC is for builders and digital experimenters — not speculative
+              trading or investment pitches.
             </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                href={COMMUNITY.telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {COMMUNITY.telegramCta}
+              </a>
+            </div>
           </div>
         </section>
       </main>

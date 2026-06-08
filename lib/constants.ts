@@ -15,6 +15,12 @@ export const TOKEN = {
     "https://tonviewer.com/EQBbbUvr84qdfAAWUL8ZjRvO3FzEDKsLEFMiKlXg7d9u17Rq",
 } as const;
 
+export const COMMUNITY = {
+  telegramUrl: "https://t.me/taller_bc",
+  telegramHandle: "@taller_bc",
+  telegramCta: "Join TALLER BC on Telegram",
+} as const;
+
 export const SITE = {
   title: "TALLER BC — Grow as a Builder on TON",
   description:
