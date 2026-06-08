@@ -2,8 +2,10 @@
 
 **Date:** 2026-06-08  
 **Author:** Masha-Kostil  
-**Repo:** `Vh301/TALLER_LANDING` (local folder: `taller_landing`)  
-**Vercel project:** `taller-landing`
+**Local path:** `C:\Projects\taller_landing`  
+**GitHub repo (target):** `Vh301/TALLER_LANDING` — create empty repo on GitHub, then `git push -u origin main`  
+**Vercel project:** `taller-landing`  
+**Production URL:** https://taller-landing.vercel.app
 
 ---
 
