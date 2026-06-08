@@ -3,7 +3,7 @@
 Public information page for **TALLER BC — Grow as a Builder on TON**. Creative builders club and community utility token (TALLER / TLR).
 
 - **Stack:** Next.js 16, TypeScript, Tailwind CSS
-- **Deploy:** Vercel (`taller-landing`)
+- **Deploy:** Vercel — https://taller-bc.vercel.app
 - **No backend**, no wallet connect, no secrets
 
 ## Local dev
