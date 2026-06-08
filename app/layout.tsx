@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.description,
+  icons: {
+    icon: "/taller-bc-logo.png",
+    apple: "/taller-bc-logo.png",
+  },
   openGraph: {
     title: SITE.title,
     description: SITE.description,

@@ -1,4 +1,12 @@
+import Image from "next/image";
 import { SITE, TOKEN } from "@/lib/constants";
+
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#grow", label: "Grow" },
+  { href: "#utility", label: "Utility" },
+  { href: "#token", label: "Token" },
+] as const;
 
 const pillarCards = [
   {
@@ -63,24 +71,30 @@ const tokenRows = [
 export default function HomePage() {
   return (
     <>
-      <header className="border-b border-[var(--card-border)]/80">
-        <div className="section-inner flex items-center justify-between py-5 sm:py-6">
-          <div className="text-sm font-semibold tracking-wide text-sky-400">
-            TALLER BC
-          </div>
-          <nav className="flex flex-wrap justify-end gap-4 text-sm text-[var(--muted)]">
-            <a href="#about" className="hover:text-white">
-              About
-            </a>
-            <a href="#grow" className="hover:text-white">
-              Grow
-            </a>
-            <a href="#utility" className="hover:text-white">
-              Utility
-            </a>
-            <a href="#token" className="hover:text-white">
-              Token
-            </a>
+      <header className="sticky top-0 z-50 border-b border-[var(--card-border)]/80 bg-[var(--background)]/90 backdrop-blur-md">
+        <div className="section-inner flex items-center justify-between gap-6 py-4 sm:py-5">
+          <a
+            href="#"
+            className="flex min-w-0 items-center gap-3 transition opacity-95 hover:opacity-100"
+          >
+            <Image
+              src="/taller-bc-logo.png"
+              alt="TALLER BC logo"
+              width={44}
+              height={44}
+              className="h-10 w-10 shrink-0 rounded-full sm:h-11 sm:w-11"
+              priority
+            />
+            <span className="truncate text-sm font-semibold tracking-wide text-sky-400 sm:text-base">
+              TALLER BC
+            </span>
+          </a>
+          <nav className="flex shrink-0 flex-wrap justify-end gap-x-4 gap-y-1 text-sm text-[var(--muted)]">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="hover:text-white">
+                {link.label}
+              </a>
+            ))}
           </nav>
         </div>
       </header>
